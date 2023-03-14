@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_10sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.rentzy.customfont.CustomTextViewSemiBold
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:textColor="@color/colorPrimary2"
+            android:textSize="@dimen/_13ssp"
+            tools:text="What is Perkz Dollar?" />
+
+        <ImageView
+            android:id="@+id/iv_arrowup"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:src="@drawable/arrow_up"
+            app:tint="@color/light_dark_gray" />
+        <ImageView
+            android:id="@+id/iv_arrowdown"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_down"
+            android:visibility="gone"
+            app:tint="@color/light_dark_gray" />
+
+    </RelativeLayout>
+    <com.example.rentzy.customfont.CustomTextViewMedium
+        android:id="@+id/tv_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/dummy"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:lineSpacingExtra="@dimen/_3sdp"
+        android:textColor="@color/font_color_gray"
+        android:textSize="@dimen/_11ssp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray"
+        android:layout_marginVertical="@dimen/_5sdp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    tools:context=".fragment.ContactusFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/iv_contactusback"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_arrow_lightgray" />
+
+                <com.example.rentzy.customfont.CustomTextViewBold
+                    style="@style/black_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/iv_contactusback"
+                    android:text="Contact us"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.example.rentzy.customfont.CustomTextViewBold
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_top"
+                android:text="Get in touch"
+                android:textColor="@color/blue_app"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:text="Your name"
+                android:textColor="@color/blue_app"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.example.rentzy.customfont.CustomEdittext
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:maxLength="20"/>
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_emailaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_name"
+                android:text="Email address"
+                android:textColor="@color/blue_app"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.example.rentzy.customfont.CustomEdittext
+                android:id="@+id/edt_emailaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_emailaddress"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:inputType="textMultiLine"
+                android:lines="2"/>
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_issueheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_emailaddress"
+                android:text="You want to talk about"
+                android:textColor="@color/blue_app"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.example.rentzy.customfont.CustomEdittext
+                android:id="@+id/edt_issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_issueheading"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:inputType="textMultiLine"
+                android:lines="2"/>
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_issue"
+                android:text="Your message"
+                android:textColor="@color/blue_app"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.example.rentzy.customfont.CustomEdittext
+                android:id="@+id/edt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10" />
+
+            <com.example.rentzy.customfont.CustomButton
+                android:id="@+id/btn_send"
+                style="@style/white_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_message"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:backgroundTint="@color/colorPrimary2"
+                android:text="Send" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

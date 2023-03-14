@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragment.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary2"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_profileBack"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:src="@drawable/back_arrow_lightgray"
+                    app:tint="@color/white" />
+
+                <com.example.rentzy.customfont.CustomTextViewBold
+                    style="@style/white_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:text="My Profile"
+                    android:textStyle="bold" />
+
+                <com.example.rentzy.customfont.CustomTextViewBold
+                    android:id="@+id/tv_myprofileEdit"
+                    style="@style/white_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit" />
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_userProfileImage"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_below="@+id/rl_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/dummy_user" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/iv_userProfileImage"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:backgroundTint="@color/white"
+                android:paddingVertical="@dimen/_15sdp"
+                android:background="@drawable/rounded_linearlayout"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    app:cardElevation="@dimen/_1sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <com.example.rentzy.customfont.CustomTextViewSemiBold
+                            style="@style/black_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="Personal Details" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/colorPrimary2">
+                                
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/white_usericon"/>
+                                
+                            </LinearLayout>
+
+                            <com.example.rentzy.customfont.CustomTextViewMedium
+                                android:id="@+id/tv_userName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="User Name"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                style="@style/black_12"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/colorPrimary2">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/white_call_icon"/>
+
+                            </LinearLayout>
+
+                            <com.example.rentzy.customfont.CustomTextViewMedium
+                                android:id="@+id/tv_userNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="+1234567890"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                style="@style/black_12"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/colorPrimary2">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/message"/>
+
+                            </LinearLayout>
+
+                            <com.example.rentzy.customfont.CustomTextViewMedium
+                                android:id="@+id/tv_userEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="abc@gmail.com"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                style="@style/black_12"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/colorPrimary2">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/location_icon_white"/>
+
+                            </LinearLayout>
+
+                            <com.example.rentzy.customfont.CustomTextViewMedium
+                                android:id="@+id/tv_userLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="India"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                style="@style/black_12"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_notificationicon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                tools:src="@drawable/bell" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.rentzy.customfont.CustomTextViewSemiBold
+                android:id="@+id/tv_notificationtitle"
+                style="@style/black_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Appointment Reminder" />
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_notificationdescription"
+                style="@style/gray_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                tools:text="Your appointment will start after 15 minutes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.rentzy.customfont.CustomTextViewMedium
+                android:id="@+id/tv_notificationtime"
+                style="@style/gray_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10 Mins ago" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@color/light_gray" />
+    </LinearLayout>
+</LinearLayout>

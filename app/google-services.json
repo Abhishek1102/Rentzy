@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1090190503526",
+    "project_id": "rentzy-9a07d",
+    "storage_bucket": "rentzy-9a07d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090190503526:android:38ef989bee8dda281707a7",
+        "android_client_info": {
+          "package_name": "com.example.rentzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090190503526-1on2826t0j18ccsv37cpu6gvsaoauc3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP9H_NFSsPPq3-gVUjz8UP6ICioeFOY3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090190503526-1on2826t0j18ccsv37cpu6gvsaoauc3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

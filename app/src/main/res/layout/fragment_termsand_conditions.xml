@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    tools:context=".fragment.TermsandConditionsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_termsandconditionsBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_arrow_lightgray" />
+
+            <com.example.rentzy.customfont.CustomTextViewBold
+                style="@style/black_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/iv_termsandconditionsBack"
+                android:text="Terms and Conditions"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_button"
+            android:layout_below="@+id/rl_top"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.rentzy.customfont.CustomTextViewSemiBold
+                    android:id="@+id/tv_title"
+                    style="@style/black_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="General Site Usage" />
+
+                <com.example.rentzy.customfont.CustomTextViewSemiBold
+                    android:id="@+id/tv_subtitle"
+                    style="@style/black_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:text="Last Revised : February 28 2023" />
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_titledesc"
+                    style="@style/gray_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_subtitle"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:text="@string/dummyreview" />
+
+                <com.example.rentzy.customfont.CustomTextViewSemiBold
+                    android:id="@+id/tv_firsttitle"
+                    style="@style/black_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_titledesc"
+                    android:text="Your Agreement"
+                    android:textAllCaps="true" />
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_firsttitledesc"
+                    style="@style/gray_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_firsttitle"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:text="@string/dummyreview" />
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_descone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_firsttitledesc"
+                    android:text="@string/dummy"
+                    style="@style/gray_10"/>
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_desctwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_descone"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:text="@string/dummy"
+                    style="@style/gray_10"/>
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_descthree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_desctwo"
+                    android:text="@string/dummy"
+                    style="@style/gray_10"/>
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_descfour"
+                    style="@style/gray_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_below="@+id/tv_descthree"
+                    android:text="@string/dummy" />
+
+                <com.example.rentzy.customfont.CustomTextViewMedium
+                    android:id="@+id/tv_descfive"
+                    style="@style/gray_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_descfour"
+                    android:text="@string/dummy" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_alignParentBottom="true">
+
+            <com.example.rentzy.customfont.CustomButton
+                android:id="@+id/btn_accept"
+                style="@style/white_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/rounded_color_linearlayout"
+                android:backgroundTint="@color/colorPrimary2"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Accept" />
+
+            <com.example.rentzy.customfont.CustomButton
+                android:id="@+id/btn_decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/blue_color_border_rounded"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Decline"
+                android:textColor="@color/colorPrimary2"
+                android:textSize="@dimen/_12ssp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#1B1C1E</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!--    my colors-->
+
+    <color name="colorPrimary1">#FBC8D5</color>
+    <color name="colorPrimary2">#9896F0</color>
+    <color name="font_color_gray">#6c757d</color>
+
+    <color name="colorPrimary">#0E57A8</color>
+    <color name="colorPrimaryDark">#b71b23</color>
+    <color name="colorAccent">#b71b23</color>
+
+    <color name="success">#43acc1</color>
+    <color name="error">#FF363B</color>
+
+    <color name="bg_white">#F8F8F8</color>
+    <color name="colorBackground">#FCFCFC</color>
+    <color name="colorstatustheme">#eff8fa</color>
+    <color name="lightGreen">#52b788</color>
+    <color name="lightblue">#5dc0ad</color>
+    <color name="very_light_blue">#90e0ef</color>
+    <color name="pink">#b392ac</color>
+    <color name="purple">#5e60ce</color>
+    <color name="cream">#ffb4a2</color>
+    <color name="click_color">#808080</color>
+    <color name="black_alpha">#A90A0A0B</color>
+    <color name="black_alpha_1">#800A0A0B</color>
+    <color name="black_alpha_2">#080A0A0B</color>
+    <color name="red1">#FF363B</color>
+    <color name="red_2">#E11919</color>
+    <color name="blue_dark">#0000ff</color>
+    <color name="green">#088D6D</color>
+    <color name="green_alpha">#1A0BF6BE</color>
+    <color name="lime_green">#22CCA2</color>
+    <color name="selected_gry">#F5F5F7</color>
+    <color name="gray_terms">#7A7A7A</color>
+    <color name="view_color">#F1F1F1</color>
+    <color name="gray">#F5F5F7</color>
+    <color name="light_gray">#E8E8E8</color>
+    <color name="darker_gray">#787878</color>
+    <color name="orange">#FF6937</color>
+    <color name="gray_light_dark">#C5C5C5</color>
+    <color name="gray_1">#C4C4C4</color>
+    <color name="gray_2">#F1F1F1</color>
+    <color name="gray_3">#F6F6F6</color>
+    <color name="yellow">#FCC005</color>w
+    <color name="blue2">#385490</color>
+    <color name="white_bg_dark">#97A7C3</color>
+    <color name="green2">#1C9A00</color>
+    <color name="orange2">#FB675D</color>
+    <color name="imageBorderColor">#E01E7A</color>
+    <color name="miniTitle">#2A2E43</color>
+    <color name="sun">#f9d71c</color>
+    <color name="red_wrong">#EE4957</color>
+    <color name="palette1">#00C39E</color>
+    <color name="palette2">#FF5E96</color>
+    <color name="palette3">#FF952A</color>
+    <color name="palette4">#D577FF</color>
+    <color name="palette5">#5F86FF</color>
+    <color name="palette6">#FFB515</color>
+    <color name="palette7">#1de6ff</color>
+    <color name="palette8">#d81b60</color>
+    <color name="palette9">#5DADE2</color>
+    <color name="palette10">#F8C471</color>
+    <color name="palette11">#E74C3C</color>
+    <color name="palette12">#0277BD</color>
+    <color name="blue_app">#567ef3</color>
+    <color name="light_dark_gray">#adb5bd</color>
+    <color name="palette13">#566E7A</color>
+    <color name="selection_color">#E9EDF2</color>
+    <color name="selected_gray_color">#66000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="pending">#FF952A</color>
+    <color name="light_blue">#13bec5</color>
+    <color name="accept">#00C39E</color>
+    <color name="reject">#EE4957</color>
+
+    <color name="red_alpha">#1AEE4957</color>
+    <color name="orange_alpha">#1AFF5900</color>
+    <color name="gray_alpha">#1A787878</color>
+    <color name="orange3">#FF5100</color>
+    <color name="orange4">#fb8500</color>
+    <color name="edittext_bg">#F7F8FC</color>
+    <color name="back_arrow_bg">#F5F7F9</color>
+    <color name="image_tint">#8196B2</color>
+
+</resources>
