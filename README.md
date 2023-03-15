@@ -12,3 +12,4 @@ Features:-
 Features for future time period :-
 ->Wishlisting the item
 ->Searching as per user requirements(name,location,etc)
+->loading screen
