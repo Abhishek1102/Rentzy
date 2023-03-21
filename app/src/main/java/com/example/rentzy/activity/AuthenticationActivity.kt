@@ -6,6 +6,7 @@ import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import butterknife.BindView
+import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.example.rentzy.fragment.LoginFragment
 
@@ -18,6 +19,7 @@ class AuthenticationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
 
+        AppConstant.hideProgressDialog()
         addfragment(LoginFragment(),"Login Fragment")
 
     }

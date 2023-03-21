@@ -22,7 +22,7 @@
          <com.example.rentzy.customfont.CustomTextViewBold
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="More"
+                android:text="@string/more"
                 style="@style/black_16"/>
 
         </LinearLayout>
@@ -51,7 +51,7 @@
                     android:id="@+id/tv_settings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Settings"
+                    android:text="@string/settings"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>
@@ -76,7 +76,7 @@
                     android:id="@+id/tv_contactus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contact us"
+                    android:text="@string/contact_us"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>
@@ -101,7 +101,7 @@
                     android:id="@+id/tv_termsandconditions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Terms and conditions"
+                    android:text="@string/terms_and_conditions"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>
@@ -126,7 +126,7 @@
                     android:id="@+id/tv_faq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="FAQ"
+                    android:text="@string/faq"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>
@@ -152,7 +152,7 @@
                     android:id="@+id/tv_changelanguage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Change Language"
+                    android:text="@string/change_language"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>
@@ -178,7 +178,7 @@
                     android:id="@+id/tv_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Logout"
+                    android:text="@string/logout"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     style="@style/black_11"/>
             </LinearLayout>

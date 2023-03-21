@@ -17,6 +17,7 @@ import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.fragment.HouseProfileFragment
 import com.example.rentzy.helper.SecurePreferences
 import com.example.rentzy.model.DashboardModel
+import android.os.Handler
 
 
 class DashboardAdapter(
@@ -27,7 +28,7 @@ class DashboardAdapter(
     RecyclerView.Adapter<DashboardAdapter.ViewHolder>() {
 
     fun setFilteredList(list: List<DashboardModel>) {
-        this.list = list.toMutableList()
+        this.list = list as MutableList<DashboardModel>
         notifyDataSetChanged()
     }
 
@@ -57,9 +58,13 @@ class DashboardAdapter(
         holder.itemView.setOnClickListener {
 //            val houseProfileFragment = HouseProfileFragment(list.get(position))
 //            openfragment(houseProfileFragment, "HouseProfileFragment")
+            AppConstant.showProgressDialog(context)
+            Handler().postDelayed({
 
-            //passing value in form of model to method in dashboardfragment
-            onClicked(dashboardModel)
+                //passing value in form of model to method in dashboardfragment
+                onClicked(dashboardModel)
+
+            }, 2000)
 
 
         }
@@ -80,7 +85,5 @@ class DashboardAdapter(
         var iv_heart: ImageView = itemView.findViewById(com.example.rentzy.R.id.iv_listheart)
         var iv_noheart: ImageView = itemView.findViewById(com.example.rentzy.R.id.iv_listnoHeart)
     }
-
-
 
 }

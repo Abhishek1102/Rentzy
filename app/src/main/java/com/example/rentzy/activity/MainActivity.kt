@@ -1,12 +1,14 @@
 package com.example.rentzy.activity
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import butterknife.BindView
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.example.rentzy.adapter.DashboardAdapter
 import com.example.rentzy.fragment.*
@@ -36,7 +38,11 @@ class MainActivity : AppCompatActivity() {
         meo!!.add(MeowBottomNavigation.Model(3, R.drawable.add))
         meo!!.add(MeowBottomNavigation.Model(4, R.drawable.more))
 
-        addfragment(DashboardFragment(), "DashboardFragment")
+        AppConstant.showProgressDialog(this)
+        Handler().postDelayed({
+            addfragment(DashboardFragment(), "DashboardFragment")
+            AppConstant.hideProgressDialog()
+        },2000)
 
         meo!!.setOnClickMenuListener {
             //                Toast.makeText(getApplicationContext(), "Clicked item " + item.getId(), Toast.LENGTH_SHORT).show();

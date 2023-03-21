@@ -3,16 +3,19 @@ package com.example.rentzy.fragment
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import android.window.SplashScreen
 import androidx.fragment.app.Fragment
 import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.example.rentzy.activity.AuthenticationActivity
+import com.example.rentzy.activity.SplashActivity
 import com.example.rentzy.helper.SecurePreferences
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -26,6 +29,7 @@ class MoreFragment : Fragment() {
     lateinit var lv_faq: LinearLayout
     lateinit var lv_contactus: LinearLayout
     lateinit var lv_logout: LinearLayout
+    lateinit var lv_changelanguage:LinearLayout
 
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var googleSignInClient: GoogleSignInClient
@@ -42,6 +46,7 @@ class MoreFragment : Fragment() {
         lv_faq = view.findViewById(R.id.lv_faq)
         lv_settings = view.findViewById(R.id.lv_settings)
         lv_logout = view.findViewById(R.id.lv_logout)
+        lv_changelanguage = view.findViewById(R.id.lv_changelanguage)
 
         // Initialize firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -73,6 +78,42 @@ class MoreFragment : Fragment() {
             replacefragment(ContactusFragment(), "Contactus Fragment")
         }
 
+        lv_changelanguage.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.custom_dialog)
+            val title = dialog.findViewById<TextView>(R.id.txt_dialog_title)
+            val msg = dialog.findViewById<TextView>(R.id.txt_dialog_msg)
+            val eng = dialog.findViewById<TextView>(R.id.txt_positive)
+            val guj = dialog.findViewById<TextView>(R.id.txt_negative)
+
+            title.setText(R.string.change_language)
+            msg.setText(getString(R.string.ask_change_language))
+            eng.setText(getString(R.string.english))
+            guj.setText(getString(R.string.gujarati))
+
+            eng.setOnClickListener {
+                SecurePreferences.saveLanguagePreferences(activity, AppConstant.LANGUAGE, "en")
+                AppConstant.setLanguage(activity)
+                SecurePreferences.savePreferences(activity, AppConstant.IS_LOGIN, true)
+                requireActivity().finishAffinity()
+                val i = Intent(activity, SplashActivity::class.java)
+                startActivity(i)
+            }
+            guj.setOnClickListener {
+                SecurePreferences.saveLanguagePreferences(activity, AppConstant.LANGUAGE, "gu")
+                AppConstant.setLanguage(activity)
+                SecurePreferences.savePreferences(activity, AppConstant.IS_LOGIN, true)
+                requireActivity().finishAffinity()
+                val i = Intent(activity, SplashActivity::class.java)
+                startActivity(i)
+            }
+            //Creating dialog box
+            //Creating dialog box
+            dialog.setCancelable(true)
+            dialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.show()
+        }
+
         lv_logout.setOnClickListener {
 
             val dialog = Dialog(requireContext())
@@ -83,31 +124,35 @@ class MoreFragment : Fragment() {
             val no = dialog.findViewById<TextView>(R.id.txt_negative)
 
 
-            title.setText("Logout")
-            msg.setText("Are you sure want to logout?")
-            yes.setText("Yes")
-            no.setText("No")
+            title.setText(R.string.logout)
+            msg.setText(getString(R.string.sure_to_logout))
+            yes.setText(getString(R.string.yes))
+            no.setText(getString(R.string.no))
 
             yes.setOnClickListener {
-                // Sign out from google
-                googleSignInClient.signOut().addOnCompleteListener { task ->
-                    // Check condition
-                    if (task.isSuccessful) {
-                        // When task is successful
-                        // Sign out from firebase
-                        firebaseAuth.signOut()
 
-                        // Display Toast
-                        Toast.makeText(activity, "Logout successful", Toast.LENGTH_SHORT).show()
+                AppConstant.showProgressDialog(context)
+                Handler().postDelayed({
+                    // Sign out from google
+                    googleSignInClient.signOut().addOnCompleteListener { task ->
+                        // Check condition
+                        if (task.isSuccessful) {
+                            // When task is successful
+                            // Sign out from firebase
+                            firebaseAuth.signOut()
 
-                        SecurePreferences.clearSecurepreference(context)
-                        SecurePreferences.savePreferences(context,AppConstant.IS_LOGIN,false)
+                            // Display Toast
+                            Toast.makeText(activity, "Logout successful", Toast.LENGTH_SHORT).show()
 
-                        // Finish activity
-                        startActivity(Intent(requireActivity(), AuthenticationActivity::class.java))
-                        requireActivity().finish()
+                            SecurePreferences.clearSecurepreference(context)
+                            SecurePreferences.savePreferences(context,AppConstant.IS_LOGIN,false)
+
+                            // Finish activity
+                            startActivity(Intent(requireActivity(), AuthenticationActivity::class.java))
+                            requireActivity().finish()
+                        }
                     }
-                }
+                },2000)
             }
             no.setOnClickListener {
                 dialog.dismiss()

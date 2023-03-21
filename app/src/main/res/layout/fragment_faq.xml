@@ -13,28 +13,28 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/_10sdp">
 
-    <RelativeLayout
-        android:id="@+id/rl_top"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
 
-        <ImageView
-            android:id="@+id/iv_faqback"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/back_arrow_lightgray" />
+            <ImageView
+                android:id="@+id/iv_faqback"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_arrow_lightgray" />
 
-        <com.example.rentzy.customfont.CustomTextViewBold
-            style="@style/black_14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_toEndOf="@+id/iv_faqback"
-            android:text="Faq"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            <com.example.rentzy.customfont.CustomTextViewBold
+                style="@style/black_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/iv_faqback"
+                android:text="@string/faq"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

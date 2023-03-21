@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">રેન્ટઝી</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_intro">We happy to see you again, to use your account you need to login first!</string>
+    <string name="sign_up"><u>Sign up</u></string>
+    <string name="login"><u>Login</u></string>
+    <string name="success">સફળતા</string>
+
+
+    <string name="dummyreview">લોરેમ ઇપ્સમના ફકરાઓની ઘણી ભિન્નતાઓ ઉપલબ્ધ છે, પરંતુ મોટા ભાગનાને કોઈને કોઈ સ્વરૂપમાં ફેરફારનો સામનો કરવો પડ્યો છે.</string>
+    <string name="dummy">લોરેમ ઇપ્સમના ફકરાઓની ઘણી ભિન્નતાઓ ઉપલબ્ધ છે, પરંતુ મોટા ભાગનાને કોઈને કોઈ સ્વરૂપે, ઇન્જેક્ટેડ રમૂજ દ્વારા, અથવા રેન્ડમાઈઝ્ડ શબ્દો જે સહેજ પણ વિશ્વાસપાત્ર લાગતા નથી, બદલાવનો ભોગ બન્યા છે. જો તમે Lorem Ipsum ના પેસેજનો ઉપયોગ કરવા જઈ રહ્યા છો, તો તમારે ખાતરી કરવાની જરૂર છે કે ટેક્સ્ટની મધ્યમાં શરમજનક કંઈ છુપાયેલ નથી. ઇન્ટરનેટ પરના તમામ લોરેમ ઇપ્સમ જનરેટર પૂર્વવ્યાખ્યાયિત પુનરાવર્તન કરવાનું વલણ ધરાવે છે.</string>
+    <string name="house_description_hint">આ મૂવ-ઇન તૈયાર ઘરને તાજેતરમાં અપડેટ કરવામાં આવ્યું છે, જેમાં નવી વિન્ડોઝનો સમાવેશ થાય છે જે પુષ્કળ કુદરતી પ્રકાશ પ્રદાન કરે છે. શેડ્ડ બેકયાર્ડનો આનંદ માણો અથવા શેરીમાં નીચે પડોશના પાર્કમાં ચાલો.</string>
+    <string name="owner_s_name">માલિકનું નામ</string>
+    <string name="owner_s_number">માલિકનો નંબર</string>
+    <string name="house_name">ઘરનું નામ</string>
+    <string name="house_address">ઘરનું સરનામું</string>
+    <string name="house_rent">ઘરનું ભાડું (₹ માં)</string>
+    <string name="no_of_bathroom">બાથરૂમની સંખ્યા</string>
+    <string name="no_of_kitchen">રસોડાની સંખ્યા</string>
+    <string name="no_of_bedroom">બેડરૂમની સંખ્યા</string>
+    <string name="no_of_swimming_pool">સ્વિમિંગ પૂલની સંખ્યા</string>
+    <string name="no_of_parking">પાર્કિંગની સંખ્યા</string>
+    <string name="description">વર્ણન</string>
+    <string name="add">ઉમેરો</string>
+    <string name="contact_us">અમારો સંપર્ક કરો</string>
+    <string name="get_in_touch">સંપર્કમાં રહેવા</string>
+    <string name="your_name">તમારું નામ</string>
+    <string name="email_address">ઈમેલ</string>
+    <string name="you_want_to_talk_about">તમે જેના વિશે વાત કરવા માંગો છો</string>
+    <string name="your_message">તમારો સંદેશો</string>
+    <string name="send">મોકલો</string>
+    <string name="current_location">અત્યારની જ્ગ્યા</string>
+    <string name="search_here">અહીં શોધો…</string>
+    <string name="faq">Faq(વારંવાર પૂછાતા પ્રશ્નો)</string>
+    <string name="book_now">હવે બુક કરો</string>
+    <string name="houserent">ઘરનું ભાડું</string>
+    <string name="about">વિશે</string>
+    <string name="address">સરનામું</string>
+    <string name="owner">માલિક:-</string>
+    <string name="more">મોર</string>
+    <string name="settings">સેટિંગ્સ</string>
+    <string name="terms_and_conditions">નિયમો અને શરત</string>
+    <string name="change_language">ભાષા બદલો</string>
+    <string name="logout">લોગૉઉટ</string>
+    <string name="notification">નોટિફિકેશન</string>
+    <string name="my_profile">મારી પ્રોફાઈલ</string>
+    <string name="edit">એડિટ</string>
+    <string name="personal_details">અંગત વિગતો</string>
+    <string name="accounts">એકાઉન્ટ્સ</string>
+    <string name="manage_all_your_accounts">તમારા બધા એકાઉન્ટ્સ મેનેજ કરો</string>
+    <string name="syncing">સિનસિન્ગ</string>
+    <string name="confiue_background_refreshing">કોન્ફિગ્યુરે બેકગ્રાઉન્ડ રિફ્રેશિંગ</string>
+    <string name="email_settings">ઇમેઇલ સેટિંગ્સ</string>
+    <string name="restrict_content_for_your_data">રેસ્ટ્રીક્ટ કન્ટેન્ટ ફોર યોર ડેટા</string>
+    <string name="wifi">વાઇફાઇ</string>
+    <string name="limit_data_usage_to_wifi_only">ડેટા વપરાશને ફક્ત વાઇફાઇ સુધી મર્યાદિત કરો</string>
+    <string name="notifications">નોટિફિકેશન્સ</string>
+    <string name="change_app_notifications_settings">ચાંગે અપ્પ નોટિફિકેશન્સ સેટિંગ્સ</string>
+    <string name="general_site_usage">સામાન્ય સાઇટ વપરાશ</string>
+    <string name="last_revised_february_28_2023">છેલ્લે સુધારેલ: ફેબ્રુઆરી 28, 2023</string>
+    <string name="your_agreement">તમારો કરાર</string>
+    <string name="accept">સ્વીકારો</string>
+    <string name="decline">નકાર</string>
+    <string name="ask_change_language">Are you sure to change language?</string>
+    <string name="english">English</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="sure_to_logout">શું તમે લોગઆઉટ કરવા માંગો છો?</string>
+    <string name="yes">હા</string>
+    <string name="no">ના</string>
+
+</resources>

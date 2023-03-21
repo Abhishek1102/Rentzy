@@ -41,15 +41,16 @@ class DashboardFragment : Fragment() {
     lateinit var rv_dashboard: RecyclerView
     private lateinit var slider_adapter: ImagesSliderAdapter
     private lateinit var dashboardAdapter: DashboardAdapter
-    lateinit var iv_bell:ImageView
-    lateinit var iv_profile:ImageView
-    lateinit var sv_dashboard:SearchView
+    lateinit var iv_bell: ImageView
+    lateinit var iv_profile: ImageView
+    lateinit var sv_dashboard: SearchView
 
     private lateinit var storageRef: StorageReference
     private lateinit var firebaseFirestore: FirebaseFirestore
     private var imageUri: Uri? = null
     lateinit var sliderList: MutableList<Slider_Model>
-    lateinit var dashboardList: MutableList<DashboardModel>
+
+    var mList = ArrayList<DashboardModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -69,33 +70,52 @@ class DashboardFragment : Fragment() {
         getListData()
 
         iv_bell.setOnClickListener {
-            replacefragment(NotificationFragment(),"NotificationFragment")
+            replacefragment(NotificationFragment(), "NotificationFragment")
         }
 
         iv_profile.setOnClickListener {
-            replacefragment(ProfileFragment(),"ProfileFragment")
+            replacefragment(ProfileFragment(), "ProfileFragment")
         }
 
         sv_dashboard.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(p0: String?): Boolean {
+            override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
 
-            override fun onQueryTextChange(p0: String?): Boolean {
-                filter(p0)
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
                 return true
             }
-
         })
 
 
         return view
     }
 
+    private fun filterList(query: String?) {
+        if (query != null) {
+            val filteredList = ArrayList<DashboardModel>()
+            //searching for result in list
+            for (i in mList) {
+                if (i.house_name.toLowerCase(Locale.ROOT).contains(query)) {
+                    filteredList.add(i)
+                }
+            }
+            //checking if list is empty then toast will be shown
+            if (filteredList.isEmpty()) {
+                Toast.makeText(context, "No data found", Toast.LENGTH_LONG).show()
+            }
+            //if list is not empty i.e. search result is available then list is sent to adapter
+            else {
+                dashboardAdapter.setFilteredList(filteredList)
+            }
+        }
+    }
+
+
     private fun initView() {
 
         sliderList = ArrayList()
-        dashboardList = ArrayList()
 
         //initalizing firestorage and firestore
         storageRef = FirebaseStorage.getInstance().reference.child("Images")
@@ -125,22 +145,6 @@ class DashboardFragment : Fragment() {
 
     }
 
-    private fun filter(newtext: String?) {
-        if (newtext != null) {
-            val filteredList = ArrayList<DashboardModel>()
-            for (i in dashboardList) {
-                if (i.house_name.lowercase(Locale.ROOT).contains(newtext)) {
-                    filteredList.add(i)
-                }
-            }
-            if (filteredList.isEmpty()) {
-                Toast.makeText(context, "No data found", Toast.LENGTH_LONG).show()
-            } else {
-                dashboardAdapter.setFilteredList(filteredList)
-            }
-        }
-    }
-
     private fun getListData() {
         firebaseFirestore.collection("house_info")
             .get().addOnSuccessListener { documents ->
@@ -148,6 +152,7 @@ class DashboardFragment : Fragment() {
                     val user = documents.toObjects(DashboardModel::class.java)
                     //onclicked is called and model is passed to it
                     dashboardAdapter = DashboardAdapter(context, user, ::onClicked)
+                    mList = user as ArrayList<DashboardModel>
                     rv_dashboard.adapter = dashboardAdapter
                 }
             }.addOnFailureListener {
@@ -159,7 +164,7 @@ class DashboardFragment : Fragment() {
     private fun onClicked(dashboardModel: DashboardModel) {
 //        Toast.makeText(context, "clicked item is ${dashboardModel.house_name}", Toast.LENGTH_SHORT).show()
         //passing data in model to another fragment
-        replacefragment(HouseProfileFragment(dashboardModel),"HouseProfileFragment")
+        replacefragment(HouseProfileFragment(dashboardModel), "HouseProfileFragment")
 
     }
 

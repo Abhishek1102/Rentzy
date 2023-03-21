@@ -49,7 +49,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:includeFontPadding="false"
-                        android:text="Current Location"
+                        android:text="@string/current_location"
                         android:textColor="@color/font_color_gray" />
 
 
@@ -98,13 +98,14 @@
 
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/searchview_dashboard"
-                    style="@style/gray_12"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_35sdp"
+                    style="@style/gray_12"
                     android:alpha="0.8"
                     android:background="@drawable/search_round_shape"
                     app:iconifiedByDefault="false"
-                    app:queryHint="Search here..." />
+                    app:queryHint="@string/search_here"/>
+
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

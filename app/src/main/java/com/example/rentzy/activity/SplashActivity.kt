@@ -7,6 +7,7 @@ import android.view.WindowManager
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import butterknife.BindView
+import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -15,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
 
     @BindView(R.id.progressbar)
     lateinit var pb: ProgressBar
-    lateinit var mAuth:FirebaseAuth
+    lateinit var mAuth: FirebaseAuth
 
     // Splash Screen
     private val SPLASH_SCREEN_TIME_OUT = 3000
@@ -33,16 +34,20 @@ class SplashActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+        //to change language
+
+        //to change language
+        AppConstant.setLanguage(this)
+
         Handler().postDelayed(
             {
 
                 var user: FirebaseUser? = mAuth.currentUser
-                if(user!=null) {
-                    startActivity(Intent(this,MainActivity::class.java))
+                if (user != null) {
+                    startActivity(Intent(this, MainActivity::class.java))
                     this.finish()
-                }
-                else{
-                    startActivity(Intent(this,AuthenticationActivity::class.java))
+                } else {
+                    startActivity(Intent(this, AuthenticationActivity::class.java))
                     this.finish()
 
                 }

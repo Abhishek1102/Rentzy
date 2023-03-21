@@ -38,7 +38,7 @@
                    android:layout_centerVertical="true"
                    android:layout_marginStart="@dimen/_10sdp"
                    android:layout_toRightOf="@+id/iv_settingsBack"
-                   android:text="Settings"
+                   android:text="@string/settings"
                    android:textStyle="bold" />
            </RelativeLayout>
 
@@ -72,14 +72,14 @@
                            style="@style/black_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Accounts" />
+                           android:text="@string/accounts" />
 
                        <com.example.rentzy.customfont.CustomTextViewMedium
                            android:id="@+id/tv_accountsdesc"
                            style="@style/gray_10"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Manage all your accounts" />
+                           android:text="@string/manage_all_your_accounts" />
                    </LinearLayout>
 
                </LinearLayout>
@@ -113,14 +113,14 @@
                            style="@style/black_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Syncing" />
+                           android:text="@string/syncing" />
 
                        <com.example.rentzy.customfont.CustomTextViewMedium
                            android:id="@+id/tv_syncingdesc"
                            style="@style/gray_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Confiue background refreshing" />
+                           android:text="@string/confiue_background_refreshing" />
                    </LinearLayout>
 
                </LinearLayout>
@@ -154,14 +154,14 @@
                            style="@style/black_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Email Settings" />
+                           android:text="@string/email_settings" />
 
                        <com.example.rentzy.customfont.CustomTextViewMedium
                            android:id="@+id/tv_emaildesc"
                            style="@style/gray_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Restrict content for your data" />
+                           android:text="@string/restrict_content_for_your_data" />
                    </LinearLayout>
 
                </LinearLayout>
@@ -196,14 +196,14 @@
                            style="@style/black_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Wifi" />
+                           android:text="@string/wifi" />
 
                        <com.example.rentzy.customfont.CustomTextViewMedium
                            android:id="@+id/tv_wifidesc"
                            style="@style/gray_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Limit data usage to wifi only" />
+                           android:text="@string/limit_data_usage_to_wifi_only" />
                    </LinearLayout>
 
                </LinearLayout>
@@ -238,14 +238,14 @@
                            style="@style/black_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Notifications" />
+                           android:text="@string/notifications" />
 
                        <com.example.rentzy.customfont.CustomTextViewMedium
                            android:id="@+id/tv_notificationsdesc"
                            style="@style/gray_11"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
-                           android:text="Change app notifications settings" />
+                           android:text="@string/change_app_notifications_settings" />
                    </LinearLayout>
 
                </LinearLayout>

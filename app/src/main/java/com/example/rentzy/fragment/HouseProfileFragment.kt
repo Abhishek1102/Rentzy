@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.example.rentzy.model.DashboardModel
 
@@ -58,6 +59,9 @@ class HouseProfileFragment(private var dashboardModell: DashboardModel) : Fragme
 
         //storing data in this file's model using this keyword
         this.dashboardModel = dashboardModell
+
+        //hide progress dialog
+        AppConstant.hideProgressDialog()
 
         initView()
 
