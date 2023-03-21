@@ -12,6 +12,8 @@ Features:-
 ->User of perfect icons size and color for making app look perfect from every way
 ->Better selection of design and color for app to look good
 ->Have custom loader for loading process
+->T&C, faq and contact us are provided in app
+->Let user authenticate using google, otp, email whichever way user prefer.
 
 Features for future time period :-
 ->Wishlisting the item
