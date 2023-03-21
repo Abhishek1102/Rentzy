@@ -4,7 +4,7 @@ An app for searching home on rent.
 This is a Rental Application developed as a final project for my Android Kotlin Course by TOPS Technologies.
 It helps the user to add,view the houses for rent.
 
-Coud database:- Firestore
+Cloud database:- Firestore
 
 Features:-
 ->It is connected with firebase
