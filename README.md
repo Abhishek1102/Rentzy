@@ -6,24 +6,25 @@ It helps the user to add,view the houses for rent.
 
 Cloud database:- Firestore
 
-Features:-
-->It is connected with firebase
-->It uses firestore as a cloud database
-->Add your house to let others see it
-->Provide your contact information so other can contact you for further inquiry
-->Let the outside world know and see your property
-->Changing language to increase user statisfaction
-->User of perfect icons size and color for making app look perfect from every way
-->Better selection of design and color for app to look good
-->Have custom loader for loading process
-->T&C, faq and contact us are provided in app
-->Let user authenticate using google, otp, email whichever way user prefer
+## Features:-
+- It is connected with firebase
+- It uses firestore as a cloud database
+- Add your house to let others see it
+- Provide your contact information so other can contact you for further inquiry
+- Let the outside world know and see your property
+- Changing language to increase user statisfaction
+- User of perfect icons size and color for making app look perfect from every way
+- Better selection of design and color for app to look good
+- Have custom loader for loading process
+- T&C, faq and contact us are provided in app
+- Let user authenticate using google, otp, email whichever way user prefer
 
-Features for future time period :-
-->Wishlisting the item
-->Searching as per user requirements(name,location,etc)
+**Features for future time period :-**
+- Wishlisting the item
+- Searching as per user requirements(name,location,etc)
 
-**SCREENSHOTS**
+-----
+### SCREENSHOTS:-
 
 <img src="https://user-images.githubusercontent.com/71425576/226559566-f1e541d0-d965-4274-90dd-5a6e72f156cf.jpg" width="250" height="500">
 <img src="https://user-images.githubusercontent.com/71425576/226559576-e6e2c9bc-8c8c-4309-9371-9a0288593a15.jpg" width="250" height="500">
@@ -38,6 +39,7 @@ Features for future time period :-
 <img src="https://user-images.githubusercontent.com/71425576/226560491-454c3edf-d86f-464a-9083-2d68ce3684b1.jpg" width="250" height="500">
 <img src="https://user-images.githubusercontent.com/71425576/226560494-43c6ece3-ce8e-481a-aa8f-84a4fce99886.jpg" width="250" height="500">
 <img src="https://user-images.githubusercontent.com/71425576/226560500-39f735b0-860a-4c07-af3e-a565042fb581.jpg" width="250" height="500">
+**In Gujarati language**
 <img src="https://user-images.githubusercontent.com/71425576/226561365-dd822d1a-62ad-4056-b080-6e78f6ca8060.jpg" width="250" height="500">
 <img src="https://user-images.githubusercontent.com/71425576/226561369-e55521a2-f7df-4655-bfe6-d49195b9c465.jpg" width="250" height="500">
 <img src="https://user-images.githubusercontent.com/71425576/226561373-6559b9ec-008a-4b4c-b82d-049cf100fcaf.jpg" width="250" height="500">
