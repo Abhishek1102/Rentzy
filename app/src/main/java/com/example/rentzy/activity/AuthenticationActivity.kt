@@ -19,7 +19,6 @@ class AuthenticationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
 
-        AppConstant.hideProgressDialog()
         addfragment(LoginFragment(),"Login Fragment")
 
     }

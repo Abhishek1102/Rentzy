@@ -226,7 +226,6 @@ class LoginFragment : Fragment() {
         // Initialize firebase user
         val firebaseUser = firebaseAuth.currentUser
         // Check condition
-        // Check condition
         if (firebaseUser != null) {
             // When user already sign in
             // redirect to profile activity
