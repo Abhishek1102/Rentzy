@@ -29,6 +29,7 @@ class AppConstant {
         var LOGIN_API = "https://abhitestsite.000webhostapp.com/Greetings_Api/login.php"
 
         var LANGUAGE = "user_language"
+        var is_dark_mode_on = "no"
 
         lateinit var dialog:ProgressDialog
 

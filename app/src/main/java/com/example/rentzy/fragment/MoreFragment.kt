@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import android.window.SplashScreen
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
@@ -30,6 +30,7 @@ class MoreFragment : Fragment() {
     lateinit var lv_contactus: LinearLayout
     lateinit var lv_logout: LinearLayout
     lateinit var lv_changelanguage:LinearLayout
+    lateinit var lv_darkmode:LinearLayout
 
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var googleSignInClient: GoogleSignInClient
@@ -47,6 +48,7 @@ class MoreFragment : Fragment() {
         lv_settings = view.findViewById(R.id.lv_settings)
         lv_logout = view.findViewById(R.id.lv_logout)
         lv_changelanguage = view.findViewById(R.id.lv_changelanguage)
+        lv_darkmode = view.findViewById(R.id.lv_darkMode)
 
         // Initialize firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -76,6 +78,17 @@ class MoreFragment : Fragment() {
 
         lv_contactus.setOnClickListener {
             replacefragment(ContactusFragment(), "Contactus Fragment")
+        }
+
+        lv_darkmode.setOnClickListener {
+            Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show()
+            if (SecurePreferences.getBooleanPreference(context, AppConstant.is_dark_mode_on)) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, false)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, true)
+            }
         }
 
         lv_changelanguage.setOnClickListener {

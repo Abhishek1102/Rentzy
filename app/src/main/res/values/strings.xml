@@ -68,6 +68,7 @@
     <string name="sure_to_logout">Are you sure want to logout?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="dark_mode">Dark Mode</string>
 
 
 </resources>
