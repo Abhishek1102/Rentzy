@@ -74,15 +74,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_main, fragment, tag)
         fragmentTransaction.commit()
     }
-
-    private fun addFullfragment(fragment: Fragment, tag: String) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_full, fragment, tag)
-        fragmentTransaction.commit()
-    }
-
-
 }
 
 

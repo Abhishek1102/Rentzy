@@ -1,8 +1,11 @@
 package com.example.rentzy.fragment
 
+import android.app.Activity
+import android.content.ContentValues.TAG
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.d
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +25,9 @@ import com.example.rentzy.adapter.ImagesSliderAdapter
 import com.example.rentzy.helper.GravitySnapHelper
 import com.example.rentzy.model.DashboardModel
 import com.example.rentzy.model.Slider_Model
+import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -50,6 +56,9 @@ class DashboardFragment : Fragment() {
     private var imageUri: Uri? = null
     lateinit var sliderList: MutableList<Slider_Model>
 
+    private var interstitialAd: InterstitialAd? = null
+    private var adcount = 0
+
     var mList = ArrayList<DashboardModel>()
 
     override fun onCreateView(
@@ -64,6 +73,10 @@ class DashboardFragment : Fragment() {
         iv_bell = view.findViewById(R.id.iv_bell)
         iv_profile = view.findViewById(R.id.iv_profile)
         sv_dashboard = view.findViewById(R.id.searchview_dashboard)
+
+        MobileAds.initialize(requireContext()){
+            loadadds()
+        }
 
         initView()
         getImages()
@@ -90,6 +103,66 @@ class DashboardFragment : Fragment() {
 
 
         return view
+    }
+
+    private fun loadadds() {
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(
+            requireContext(),
+            "ca-app-pub-3940256099942544/1033173712",
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    interstitialAd = null
+                    Toast.makeText(context, "Ad failed to load", Toast.LENGTH_SHORT).show()
+                    d("Ads", "fail to load error ${p0.message}")
+                }
+
+                override fun onAdLoaded(p0: InterstitialAd) {
+                    Toast.makeText(context, "Ad Loaded successfully", Toast.LENGTH_SHORT).show()
+                    interstitialAd = p0
+                }
+
+            })
+    }
+
+    private fun showadds() {
+        if (interstitialAd != null) {
+            //after every 3 clicks ad is displayed
+            if (adcount%3==0){
+                interstitialAd?.show(context as Activity)
+
+                interstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdClicked() {
+                        Toast.makeText(context, "Ad was clicked", Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(p0: AdError) {
+                        interstitialAd = null
+                        Toast.makeText(context, "Ad failed to show", Toast.LENGTH_SHORT).show()
+                        d("Ads", "fail to show ads ${p0.message}")
+                    }
+
+                    override fun onAdDismissedFullScreenContent() {
+                        interstitialAd = null
+                        Toast.makeText(context, "Ad was dismissded", Toast.LENGTH_SHORT).show()
+                        loadadds()
+                    }
+
+                    override fun onAdShowedFullScreenContent() {
+                        Toast.makeText(context, "Ad showed fullscreen content", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+            }
+            else{
+                Toast.makeText(context, "no ads to display yet", Toast.LENGTH_SHORT).show()
+            }
+
+        } else {
+            d("Ads", "The interstitial ad wasn't ready yet.")
+        }
     }
 
     private fun filterList(query: String?) {
@@ -165,7 +238,8 @@ class DashboardFragment : Fragment() {
 //        Toast.makeText(context, "clicked item is ${dashboardModel.house_name}", Toast.LENGTH_SHORT).show()
         //passing data in model to another fragment
         replacefragment(HouseProfileFragment(dashboardModel), "HouseProfileFragment")
-
+        showadds()
+        adcount+=1
     }
 
     private fun getImages() {

@@ -43,14 +43,14 @@ class SplashActivity : AppCompatActivity() {
         //to change language
         AppConstant.setLanguage(this)
 
-        if (SecurePreferences.getBooleanPreference(applicationContext,AppConstant.is_dark_mode_on))
-        {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
-        else
-        {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
+//        if (SecurePreferences.getBooleanPreference(applicationContext,AppConstant.is_dark_mode_on))
+//        {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+//        }
+//        else
+//        {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        }
 
         Handler().postDelayed(
             {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary2"
         android:overScrollMode="never"
+        android:layout_alignParentTop="true"
         android:scrollbars="none">
 
         <RelativeLayout
@@ -236,4 +237,15 @@
 
     </ScrollView>
 
-</LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banneradView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

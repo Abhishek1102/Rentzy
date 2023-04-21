@@ -13,6 +13,10 @@ import com.bumptech.glide.Glide
 import com.example.mygreetingsapp.helper.AppConstant
 import com.example.rentzy.R
 import com.example.rentzy.helper.SecurePreferences
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -34,6 +38,8 @@ class ProfileFragment : Fragment() {
     lateinit var tv_userlocation: TextView
     lateinit var iv_back: ImageView
 
+    private lateinit var adView: AdView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,12 +53,14 @@ class ProfileFragment : Fragment() {
         tv_useremail = view.findViewById(R.id.tv_userEmail)
         tv_userlocation = view.findViewById(R.id.tv_userLocation)
         iv_back = view.findViewById(R.id.iv_profileBack)
+        adView = view.findViewById(R.id.banneradView)
 
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseUser = firebaseAuth.currentUser!!
         firestore = FirebaseFirestore.getInstance()
 
         initView()
+        showadd()
 
         iv_back.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -60,6 +68,48 @@ class ProfileFragment : Fragment() {
 
         return view
     }
+
+    private fun showadd() {
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
+        adView.adListener = object: AdListener(){
+            override fun onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+                Toast.makeText(context, "ad clicked", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+                Toast.makeText(context, "ad closed", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdFailedToLoad(adError : LoadAdError) {
+                // Code to be executed when an ad request fails.
+                Toast.makeText(context, "fail to load ad", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                Toast.makeText(context, "Ad loaded", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                Toast.makeText(context, "ad opened", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+    }
+
+
 
     private fun initView() {
 

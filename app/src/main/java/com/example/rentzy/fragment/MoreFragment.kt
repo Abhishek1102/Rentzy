@@ -82,13 +82,13 @@ class MoreFragment : Fragment() {
 
         lv_darkmode.setOnClickListener {
             Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show()
-            if (SecurePreferences.getBooleanPreference(context, AppConstant.is_dark_mode_on)) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, false)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, true)
-            }
+//            if (SecurePreferences.getBooleanPreference(context, AppConstant.is_dark_mode_on)) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, false)
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                SecurePreferences.savePreferences(context, AppConstant.is_dark_mode_on, true)
+//            }
         }
 
         lv_changelanguage.setOnClickListener {
