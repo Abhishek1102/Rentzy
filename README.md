@@ -6,6 +6,8 @@ It helps the user to add,view the houses for rent.
 
 Cloud database:- Firestore
 
+Google Ads
+
 ## Features:-
 - It is connected with firebase
 - It uses firestore as a cloud database
@@ -18,6 +20,7 @@ Cloud database:- Firestore
 - Have custom loader for loading process
 - T&C, faq and contact us are provided in app
 - Let user authenticate using google, otp, email whichever way user prefer
+- Google Banner Ads and Interstitial Ads also provided.
 
 **Features for future time period :-**
 - Wishlisting the item
